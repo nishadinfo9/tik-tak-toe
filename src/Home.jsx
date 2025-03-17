@@ -85,7 +85,7 @@ const Home = () => {
       >
         Reset Game
       </button>
-      <div className="relative top-20 max-sm:top-60 left-1/2 transform -translate-x-1/2 px-4 sm:px-6 md:px-8 lg:px-10 text-center">
+      <div className="relative top-20 left-1/2 transform -translate-x-1/2 px-4 sm:px-6 md:px-8 lg:px-10 text-center">
         Nishad <span className="text-green-500">Hasan</span>
       </div>
 
