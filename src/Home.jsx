@@ -46,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-teal-600 text-white p-4">
+    <div className="flex flex-col items-center justify-center min-h-screen w-full bg-blue-700 text-white p-4">
       {/* Winner Modal */}
       {winner && (
         <div className="fixed top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-70 z-10">
@@ -68,12 +68,12 @@ const Home = () => {
         {board.map((value, index) => (
           <button
             key={index}
-            className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center
-              ${value === "X" ? "bg-blue-500" : value === "O" ? "bg-yellow-500" : "bg-gray-200"}
-              text-red-600 text-4xl font-bold rounded-lg shadow-md transition-all duration-300`}
+            className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-gray-200
+           ${value === "X" ? "bg-green-500" : value === "O" ? "bg-yellow-500" : "bg-gray-200"}
+              text-white text-4xl font-bold rounded-lg shadow-md transition-all duration-300`}
             onClick={() => handleClick(index)}
           >
-            {value}
+            <img  src={value === "X" ? "public/o.png" : value === "O" ? "public/close.png" : "bg-gray-200"} alt="" />
           </button>
         ))}
       </div>
@@ -85,6 +85,10 @@ const Home = () => {
       >
         Reset Game
       </button>
+      <div className="relative top-20 max-sm:top-60 left-1/2 transform -translate-x-1/2 px-4 sm:px-6 md:px-8 lg:px-10 text-center">
+        Nishad <span className="text-green-500">Hasan</span>
+      </div>
+
     </div>
   );
 };
