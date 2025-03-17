@@ -70,11 +70,11 @@ const Home = () => {
             key={index}
             className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-gray-200
            ${value === "X" ? "bg-green-500" : value === "O" ? "bg-yellow-500" : "bg-gray-200"}
-              text-white text-4xl font-bold rounded-lg shadow-md transition-all duration-300`}
+              text-white text-7xl font-bold rounded-lg shadow-md transition-all duration-300`}
             onClick={() => handleClick(index)}
           >
-            <img  src={value === "X" ? "public/o.png" : value === "O" ? "public/close.png" : "bg-gray-200"} alt="" />
-          </button>
+            {value}
+            </button>
         ))}
       </div>
 
